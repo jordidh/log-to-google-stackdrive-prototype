@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(name="add-log", method="post")
+    div.input
+      span.label Project ID
+      input(type="text", name="projectId")
+    div.input
+      span.label Log Name
+      input(type="text", name="logName")
+    div.input
+      span.label Log message
+      textarea(name="message", cols="80", rows="3")
+    div.actions
+      input(type="submit", value="add")
